@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Introduction &mdash; IOTCloud 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="IOTCloud 0.1 documentation" href="index.html" />
+    <link rel="next" title="2. Installation" href="installation.html" />
+    <link rel="prev" title="IOTCloud" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+   
+
+      
+   
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          IOTCloud</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">2.1. Standalone Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">2.2. Distributed Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">3.1. Objective</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html#overall-architecture">4. Overall Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html#building-the-source-code">5. BUILDING THE SOURCE CODE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">5.1. iotcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">5.2. storm-broker-connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">5.3. iotrobots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html#deployment">6. Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">6.1. Cloud Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">6.2. Build the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">6.3. Kill the existing topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">6.4. Deploy the new topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">6.5. Monitor the topology</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1. Introduction</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: IOTCloud"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; IOTCloud</span>
+    </a>
+  </li>
+  <li>
+    <a href="installation.html" title="Next Chapter: 2. Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">2. Installation &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/introduction.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html#overall-architecture">4. Overall Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html#building-the-source-code">5. BUILDING THE SOURCE CODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html#deployment">6. Deployment</a></li>
+</ul>
+
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Since the standardization of the TCP/IP protocol suite over thirty years ago, the Internet has grown steadily from a collection of small research networks to a ubiquitous worldwide network of interconnected networks that serviced nearly two billion unique users in 2009 [8].  Now with the widespread availability of wireless Internet connectivity combined with the low cost of miniature electronic devices it possible to imagine the Internet expanded to include objects, embedded with sensors, communicating over the Internet in in vast numbers [9].  These smart objects are ordinary physical things which are augmented by a small computer that includes a sensor or actuator and a communication device [3].  A smart object is thus an embedded system, consisting of a thing (the physical entity) and a component (the computer) that processes the sensor data and supports a, usually, wireless communication link to the Internet [2].
+Smart objects can be battery-operated, but not always, and typically have three components: a CPU (8-, 16- or 32-bit micro-controller), memory (a few tens of kilobytes) and a low-power wireless communication device (from a few kilobits/s to a few hundreds of kilobits/s). The size is small and the price is low: a few square mm and few dollars [10].</p>
+<p>The technical issues involved with the IoT vision are not related to the functional capabilities of smart objects – there many such embedded systems are connected to the Internet today – but in the potentially massive numbers of smart objects to be contended with. Examples of these issues include: the deployment, discovery, management and interoperability of a many types (varieties) of smart objects deployed in large quantities.  Therefore, there is a need for scalable systems which enable the exploration of these and the other related technical issues associated with creating IoT applications.  To this end we have developed a sensor-centric framework called the IoTCloud which supports an extensible set of sensor-types and large numbers of, possibly, geographically distributed smart objects.  The primary purpose of this paper is to introduce the IoTCloud and encourage you to try it.  We will also discuss the suitability of distributed clouds for hosting our middleware and present an initial measurement of system performance in the context of a simulated real-time video chat application.</p>
+<p>In our project we mainly focus on bringing the data produced by the divices in to a cloud environment and process them in a timely fasion using cloud technologies.</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, 2013, Indiana University.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

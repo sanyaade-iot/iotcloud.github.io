@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Drone &mdash; IOTCloud 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="IOTCloud 0.1 documentation" href="index.html" />
+    <link rel="prev" title="4. Installation" href="installation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+   
+
+      
+   
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          IOTCloud</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway">2.1. Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#message-broker">2.2. Message Broker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway-master">2.3. Gateway Master</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#distributed-stream-processing">2.4. Distributed Stream Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#cloud-storage">2.5. Cloud Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#batch-processing">2.6. Batch Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">3. Source Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source.html#storm-broker-connectos">3.1. storm-broker-connectos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html#iotcloud">3.2. IOTCloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html#sensorstream">3.3. sensorstream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html#iotrobots">3.4. iotrobots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">4. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">4.1. Standalone Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">4.2. Distributed Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Drone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#objective">5.1. Objective</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#overall-architecture">6. Overall Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#building-the-source-code">7. BUILDING THE SOURCE CODE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#iotcloud">7.1. iotcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm-broker-connectors">7.2. storm-broker-connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iotrobots">7.3. iotrobots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#deployment">8. Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-deployment">8.1. Cloud Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-the-changes">8.2. Build the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kill-the-existing-topology">8.3. Kill the existing topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploy-the-new-topology">8.4. Deploy the new topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monitor-the-topology">8.5. Monitor the topology</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5. Drone</a><ul>
+<li><a class="reference internal" href="#objective">5.1. Objective</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#overall-architecture">6. Overall Architecture</a></li>
+<li><a class="reference internal" href="#building-the-source-code">7. BUILDING THE SOURCE CODE</a><ul>
+<li><a class="reference internal" href="#iotcloud">7.1. iotcloud</a></li>
+<li><a class="reference internal" href="#storm-broker-connectors">7.2. storm-broker-connectors</a></li>
+<li><a class="reference internal" href="#iotrobots">7.3. iotrobots</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deployment">8. Deployment</a><ul>
+<li><a class="reference internal" href="#cloud-deployment">8.1. Cloud Deployment</a></li>
+<li><a class="reference internal" href="#build-the-changes">8.2. Build the changes</a></li>
+<li><a class="reference internal" href="#kill-the-existing-topology">8.3. Kill the existing topology</a></li>
+<li><a class="reference internal" href="#deploy-the-new-topology">8.4. Deploy the new topology</a></li>
+<li><a class="reference internal" href="#monitor-the-topology">8.5. Monitor the topology</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="installation.html" title="Previous Chapter: 4. Installation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 4. Installation</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/drone.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">3. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">4. Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Drone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#overall-architecture">6. Overall Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#building-the-source-code">7. BUILDING THE SOURCE CODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#deployment">8. Deployment</a></li>
+</ul>
+
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="drone">
+<h1>5. Drone<a class="headerlink" href="#drone" title="Permalink to this headline">¶</a></h1>
+<p>The drone we are using is Parrot Drone Version 2.0.</p>
+<div class="section" id="objective">
+<h2>5.1. Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>The drone has a Camera facing downwards. We would like the drone to track a moving target
+on the ground and follow that target. The information captured by the drone will be sent to
+a Cloud environment and will be processed there. The commands to control the drone is calculated
+in the Cloud and will be sent to the drone.</p>
+</div>
+</div>
+<div class="section" id="overall-architecture">
+<h1>6. Overall Architecture<a class="headerlink" href="#overall-architecture" title="Permalink to this headline">¶</a></h1>
+<p>The information flow happens as in the following.</p>
+<p>Drone &#8211;1&#8211;&gt; Gateway &#8211;2&#8211;&gt; Apache Storm</p>
+<p>The 1 and 2 communication happens through publish-subscribe messaging. We use RabbitMQ as the publish-subscribe broker.</p>
+<p>The driver to control the drone and get information from the drone is written in python. The drone drive code will receive the video camera data and navigation data and push it to the RabbitMQ message broker.</p>
+<p>The Gateway relays this information to Apache Storm and the processing happens in Apache Storm. Apache Storm is a distributed stream processing engine.</p>
+</div>
+<div class="section" id="building-the-source-code">
+<h1>7. BUILDING THE SOURCE CODE<a class="headerlink" href="#building-the-source-code" title="Permalink to this headline">¶</a></h1>
+<p>Before building the drone source code you need to build iotcloud project and storm-broker-connectors project.</p>
+<p>You need Apache Maven and Java installed in the system.</p>
+<div class="section" id="iotcloud">
+<h2>7.1. iotcloud<a class="headerlink" href="#iotcloud" title="Permalink to this headline">¶</a></h2>
+<p>The source code can be found in <a class="reference external" href="https://github.com/iotcloud/iotcloud2.git">https://github.com/iotcloud/iotcloud2.git</a></p>
+<p>Get this source code to local machine using git clone.</p>
+<p>Then go inside the iotcloud2 directory and type</p>
+<p>mvn clean install</p>
+<p>This will build iotcloud.</p>
+</div>
+<div class="section" id="storm-broker-connectors">
+<h2>7.2. storm-broker-connectors<a class="headerlink" href="#storm-broker-connectors" title="Permalink to this headline">¶</a></h2>
+<p>The source code can be found in</p>
+<p><a class="reference external" href="https://github.com/iotcloud/storm-broker-connectors.git">https://github.com/iotcloud/storm-broker-connectors.git</a></p>
+<p>Get this source code to local machine using git clone.</p>
+<p>Then go inside the storm-broker-connectors directory and type</p>
+<p>mvn clean install</p>
+<p>This will build the storm spouts and bolts that are needed to communicate with storm.</p>
+</div>
+<div class="section" id="iotrobots">
+<h2>7.3. iotrobots<a class="headerlink" href="#iotrobots" title="Permalink to this headline">¶</a></h2>
+<p>After building the above two projects you are ready to build the iotrobots project.</p>
+<p>Lets look at the source tree first. The code contains two main components. The processor and the sensor</p>
+<dl class="docutils">
+<dt>iotrobots &#8211;&gt; drone &#8211;&gt;</dt>
+<dd>=&gt; processor  [contains code of the stom topology]
+=&gt; sensor     [the gateway code to relay the messages coming from drone to cloud processing layer]</dd>
+</dl>
+<p>The source code can be found in</p>
+<p><a class="reference external" href="https://github.com/iotcloud/iotrobots.git">https://github.com/iotcloud/iotrobots.git</a></p>
+<p>Get this source code to local machine using git clone.</p>
+<p>Then go inside the iotrobots directory and type</p>
+<p>mvn clean install</p>
+<p>This will build the drone code. If you only need to compile the drone you can do this by going to drone directory and typing the above command.</p>
+</div>
+</div>
+<div class="section" id="deployment">
+<h1>8. Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h1>
+<p>There are two components of the project that needs to be deployed to get the data from the drone and run the processing in the cloud. They are the sensor and the processor.
+The sensor code is static and less likely to change. The processing code changes frequently.</p>
+<div class="section" id="cloud-deployment">
+<h2>8.1. Cloud Deployment<a class="headerlink" href="#cloud-deployment" title="Permalink to this headline">¶</a></h2>
+<p>We use FutureGrid as our cloud provider to deploy the components. Please read the FutureGrid OpenStack <a class="reference external" href="http://manual.futuregrid.org/openstackgrizzly.html">manual</a> before proceeding.</p>
+<p>Cloud deployment is done using three frameworks.</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://www.python.org/">Apache Storm</a></li>
+<li><a class="reference external" href="https://storm.incubator.apache.org/">IOTCloud</a></li>
+<li><a class="reference external" href="http://www.rabbitmq.com/">RabbitMQ broker</a></li>
+</ol>
+<p>Apache Storm is running on 4 nodes in FugureGrid. These are the nodes running Apache Storm</p>
+<ul class="simple">
+<li>skamburu-storm-nimus-zookeeper</li>
+<li>skamburu-supervisor-01</li>
+<li>skamburu-supervisor-02</li>
+<li>skamburu-supervisor-03</li>
+</ul>
+<p>The broker is running on the node</p>
+<ul class="simple">
+<li>skamburu-broker-01</li>
+</ul>
+<p>The iotcloud is running on the node</p>
+<ul class="simple">
+<li>skamburu-iot-01</li>
+</ul>
+<p>The user can find the IPs of these nodes using the nova commands after logging in to FutureGrid head node.</p>
+<p>The skamburu-storm-nimus-zookeeper node runs Apache Storm Nimbus and ZooKeeper. The user needs to deploy the code by logging in to this node.</p>
+<p>First log in to Futuregrid. Then use the following command to log in to the machine.</p>
+<p>ssh -l ubuntu -i private_key ip_of_the_machine</p>
+</div>
+<div class="section" id="build-the-changes">
+<h2>8.2. Build the changes<a class="headerlink" href="#build-the-changes" title="Permalink to this headline">¶</a></h2>
+<p>After log in user need go to the ~/projects/iotrobots folder. This folder contains the source code.</p>
+<p>Then do a git pull to get the latest changes. After that you can build the source by using the command.</p>
+<p>mvn clean install</p>
+<p>If the build is successful you can deploy the new code in Storm.</p>
+<p>To deploy the code we need to go to ~/deploy/storm</p>
+</div>
+<div class="section" id="kill-the-existing-topology">
+<h2>8.3. Kill the existing topology<a class="headerlink" href="#kill-the-existing-topology" title="Permalink to this headline">¶</a></h2>
+<p>First make sure to kill the existing topology before deploying the new one with the changes.</p>
+<p>We can use the following command to kill the existing one. drone_processor is the name of the running topology.</p>
+<p>./bin/storm kill drone_processor</p>
+<p>Storm will take about 30 seconds to kill the running topology.</p>
+</div>
+<div class="section" id="deploy-the-new-topology">
+<h2>8.4. Deploy the new topology<a class="headerlink" href="#deploy-the-new-topology" title="Permalink to this headline">¶</a></h2>
+<p>After that we can deploy the new topology with the command</p>
+<p>Make sure to set the broker ip to the IP address of the machine running the broker skamburu-broker-01.</p>
+<p>./bin/storm jar ~/projects/iotrobots/drone/processor/target/drone-processor-1.0-SNAPSHOT-jar-with-dependencies.jar cgl.iotrobots.st.storm.DroneProcessorTopology -url amqp://broker_ip:5672 -name drone_processor -ds_mode 2</p>
+<p>The topology supports 3 modes and this is specified in the ds_mode command line argument. Those three modes are defined as 0, 1 and 2.</p>
+<ol class="arabic simple" start="0">
+<li>Deploy with Decode, tracking and planning on the same bolt</li>
+<li>Deploy with Decode, tracking and planning on separate bolts</li>
+<li>Deploy with Decode and tracking on the same bolt</li>
+</ol>
+</div>
+<div class="section" id="monitor-the-topology">
+<h2>8.5. Monitor the topology<a class="headerlink" href="#monitor-the-topology" title="Permalink to this headline">¶</a></h2>
+<p>You can monitor the toplogy by going to the</p>
+<p><a class="reference external" href="http://ip_of_the_storm_nimbus_machine:8080/">http://ip_of_the_storm_nimbus_machine:8080/</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, 2013, Indiana University.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
