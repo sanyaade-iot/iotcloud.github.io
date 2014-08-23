@@ -16,7 +16,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -83,44 +83,24 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway">2.1. Gateway</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#message-broker">2.2. Message Broker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway-master">2.3. Gateway Master</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#distributed-stream-processing">2.4. Distributed Stream Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#cloud-storage">2.5. Cloud Storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#batch-processing">2.6. Batch Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">2.1. Standalone Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">2.2. Distributed Mode</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="source.html">3. Source Code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="source.html#storm-broker-connectos">3.1. storm-broker-connectos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="source.html#iotcloud">3.2. IOTCloud</a></li>
-<li class="toctree-l2"><a class="reference internal" href="source.html#sensorstream">3.3. sensorstream</a></li>
-<li class="toctree-l2"><a class="reference internal" href="source.html#iotrobots">3.4. iotrobots</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">4. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">4.1. Standalone Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">4.2. Distributed Mode</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html">5. Drone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">5.1. Objective</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html#overall-architecture">6. Overall Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html#building-the-source-code">7. BUILDING THE SOURCE CODE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">7.1. iotcloud</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">7.2. storm-broker-connectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">7.3. iotrobots</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html#deployment">8. Deployment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">8.1. Cloud Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">8.2. Build the changes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">8.3. Kill the existing topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">8.4. Deploy the new topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">8.5. Monitor the topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">3.1. Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#overall-architecture">3.2. Overall Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#building-the-source-code">3.3. BUILDING THE SOURCE CODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">3.4. iotcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">3.5. storm-broker-connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">3.6. iotrobots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deployment">3.7. Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">3.8. Cloud Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">3.9. Build the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">3.10. Kill the existing topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">3.11. Deploy the new topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">3.12. Monitor the topology</a></li>
 </ul>
 </li>
 </ul>
@@ -164,13 +144,8 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source.html">3. Source Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">4. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html">5. Drone</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html#overall-architecture">6. Overall Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html#building-the-source-code">7. BUILDING THE SOURCE CODE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html#deployment">8. Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a></li>
 </ul>
 
 </ul>
