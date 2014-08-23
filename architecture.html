@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Architecture &mdash; IOTCloud 0.1 documentation</title>
+    <title>2. Architecture &mdash; IOTCloud 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -33,6 +33,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="IOTCloud 0.1 documentation" href="index.html" />
+    <link rel="next" title="3. Installation" href="installation.html" />
+    <link rel="prev" title="1. Introduction" href="introduction.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -74,26 +76,35 @@
      href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">2.1. Standalone Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">2.2. Distributed Mode</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gateway">2.1. Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#message-broker">2.2. Message Broker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gateway-master">2.3. Gateway Master</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-stream-processing">2.4. Distributed Stream Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-storage">2.5. Cloud Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#batch-processing">2.6. Batch Processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">3.1. Objective</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#overall-architecture">3.2. Overall Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#building-the-source-code">3.3. BUILDING THE SOURCE CODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">3.4. iotcloud</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">3.5. storm-broker-connectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">3.6. iotrobots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#deployment">3.7. Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">3.8. Cloud Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">3.9. Build the changes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">3.10. Kill the existing topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">3.11. Deploy the new topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">3.12. Monitor the topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">3.1. Standalone Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">3.2. Distributed Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">4. Drone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">4.1. Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#overall-architecture">4.2. Overall Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#building-the-source-code">4.3. BUILDING THE SOURCE CODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">4.4. iotcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">4.5. storm-broker-connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">4.6. iotrobots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deployment">4.7. Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">4.8. Cloud Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">4.9. Build the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">4.10. Kill the existing topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">4.11. Deploy the new topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">4.12. Monitor the topology</a></li>
 </ul>
 </li>
 </ul>
@@ -109,13 +120,13 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Architecture</a><ul>
-<li><a class="reference internal" href="#gateway">Gateway</a></li>
-<li><a class="reference internal" href="#message-broker">Message Broker</a></li>
-<li><a class="reference internal" href="#gateway-master">Gateway Master</a></li>
-<li><a class="reference internal" href="#distributed-stream-processing">Distributed Stream Processing</a></li>
-<li><a class="reference internal" href="#cloud-storage">Cloud Storage</a></li>
-<li><a class="reference internal" href="#batch-processing">Batch Processing</a></li>
+<li><a class="reference internal" href="#">2. Architecture</a><ul>
+<li><a class="reference internal" href="#gateway">2.1. Gateway</a></li>
+<li><a class="reference internal" href="#message-broker">2.2. Message Broker</a></li>
+<li><a class="reference internal" href="#gateway-master">2.3. Gateway Master</a></li>
+<li><a class="reference internal" href="#distributed-stream-processing">2.4. Distributed Stream Processing</a></li>
+<li><a class="reference internal" href="#cloud-storage">2.5. Cloud Storage</a></li>
+<li><a class="reference internal" href="#batch-processing">2.6. Batch Processing</a></li>
 </ul>
 </li>
 </ul>
@@ -126,6 +137,14 @@
             
               
                 
+  <li>
+    <a href="introduction.html" title="Previous Chapter: 1. Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 1. Introduction</span>
+    </a>
+  </li>
+  <li>
+    <a href="installation.html" title="Next Chapter: 3. Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">3. Installation &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -157,10 +176,11 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">4. Drone</a></li>
 </ul>
 
 </ul>
@@ -177,32 +197,32 @@
     <div class="col-md-9">
       
   <div class="section" id="architecture">
-<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+<h1>2. Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
 <p>The generic architecture for connecting the IoT devices to cloud has being much discussed in the literature. These reference architectures consist of a distributed set of nodes to collect the data from the devices (Gateways) and a messaging layer to transmit this data to cloud services. The data is transformed and processed in the cloud both in real time and after storage. The main source of data can be abstracted as Wireless Sensor Networks. The wireless sensor networks (WSN) and IoT devices are connected to gateways. These gateways relay the data generated by the WSNs and devices to the Cloud Services using Publish-Subscribe messaging.</p>
 <p>Figure {} shows the architecture of our IoTCloud platform which is similar to the proposed architecture in the literature. One key difference is the introduction of the Gateway master to manage the different gateways connected to the system. The data generated by the devices is being considered as an event stream. The events are published to a message broker layer which supports the publish-subscribe messaging. In the cloud a distributed stream processing engine is listening for the events from the message broker layer. The event streams are passed through this distributed stream processing layer before they are being stored for further analytics. Real time analytics of the data is done at the distributed stream processing layer. The data can be stored in a traditional database, distributed file system or a NoSQL databases.
 The publish-subscribe messaging system is pluggable at the Gateway and Cloud Processing layers allowing the applications to use the most suitable message semantics.</p>
 <div class="section" id="gateway">
-<h2>Gateway<a class="headerlink" href="#gateway" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Gateway<a class="headerlink" href="#gateway" title="Permalink to this headline">¶</a></h2>
 <p>The gateway host the user code to communicate with the devices and WSNs connected. The communication can include both data retrieval and control. A single such code can connect multiple devices i.e wireless sensor network or a single device to the system. Each gateway can define multiple communication mechanisms defined to be used by the deployed devices. The devices can choose these communication mechanisms according to their preference. There can be hundreds of gateways in a deployment. Each gateway has a RPC style service to receive the control information from the master.</p>
 </div>
 <div class="section" id="message-broker">
-<h2>Message Broker<a class="headerlink" href="#message-broker" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Message Broker<a class="headerlink" href="#message-broker" title="Permalink to this headline">¶</a></h2>
 <p>We mainly use publish subscribe based messaging for sending the data to the cloud services The architecture is not limited to publish subscribe and can utilize other messaging paradigms as well. We have implemented connectors for popular open source brokers such as ActiveMQ, Kafka, Kestrel and RabbitMQ.</p>
 </div>
 <div class="section" id="gateway-master">
-<h2>Gateway Master<a class="headerlink" href="#gateway-master" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. Gateway Master<a class="headerlink" href="#gateway-master" title="Permalink to this headline">¶</a></h2>
 <p>The gateway master keeps track of the gateways and the application deployed in the gateways. The client applications wishing to communicate with the specific devices/WSNs should first contact the master to get the required information such as the broker addresses, topics. The master is designed keeping in mind to handle the Gateway failures and deployed application failures although these features are not implemented at this moment.</p>
 </div>
 <div class="section" id="distributed-stream-processing">
-<h2>Distributed Stream Processing<a class="headerlink" href="#distributed-stream-processing" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. Distributed Stream Processing<a class="headerlink" href="#distributed-stream-processing" title="Permalink to this headline">¶</a></h2>
 <p>The primary processing is done using a distributed stream processing engine. The data is considered as streams of events. The data can be filtered, processed in parallel at this layer. After the real time processing is done commands can be sent to the devices in real time using the message broker layer. If it is required to store the data for further analysis and archive purposes a cloud storage system can be used.</p>
 </div>
 <div class="section" id="cloud-storage">
-<h2>Cloud Storage<a class="headerlink" href="#cloud-storage" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Cloud Storage<a class="headerlink" href="#cloud-storage" title="Permalink to this headline">¶</a></h2>
 <p>Cloud storage can be a traditional database, a NoSQL database or a distributed file system. The data storage requirements are decided based on the application and the required batch processing after storage.</p>
 </div>
 <div class="section" id="batch-processing">
-<h2>Batch Processing<a class="headerlink" href="#batch-processing" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Batch Processing<a class="headerlink" href="#batch-processing" title="Permalink to this headline">¶</a></h2>
 <p>If further analysis is required, a cloud based batch processing system like Hadoop, ….  can be used.</p>
 </div>
 </div>

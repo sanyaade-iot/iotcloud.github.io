@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2. Installation &mdash; IOTCloud 0.1 documentation</title>
+    <title>3. Installation &mdash; IOTCloud 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -33,8 +33,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="IOTCloud 0.1 documentation" href="index.html" />
-    <link rel="next" title="3. Drone" href="drone.html" />
-    <link rel="prev" title="1. Introduction" href="introduction.html" />
+    <link rel="next" title="4. Drone" href="drone.html" />
+    <link rel="prev" title="2. Architecture" href="architecture.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -78,24 +78,33 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">2. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#standalone-mode">2.1. Standalone Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#distributed-mode">2.2. Distributed Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway">2.1. Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#message-broker">2.2. Message Broker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway-master">2.3. Gateway Master</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#distributed-stream-processing">2.4. Distributed Stream Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#cloud-storage">2.5. Cloud Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#batch-processing">2.6. Batch Processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">3.1. Objective</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#overall-architecture">3.2. Overall Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#building-the-source-code">3.3. BUILDING THE SOURCE CODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">3.4. iotcloud</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">3.5. storm-broker-connectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">3.6. iotrobots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#deployment">3.7. Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">3.8. Cloud Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">3.9. Build the changes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">3.10. Kill the existing topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">3.11. Deploy the new topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">3.12. Monitor the topology</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#standalone-mode">3.1. Standalone Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-mode">3.2. Distributed Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">4. Drone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">4.1. Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#overall-architecture">4.2. Overall Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#building-the-source-code">4.3. BUILDING THE SOURCE CODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">4.4. iotcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">4.5. storm-broker-connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">4.6. iotrobots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deployment">4.7. Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">4.8. Cloud Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">4.9. Build the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">4.10. Kill the existing topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">4.11. Deploy the new topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">4.12. Monitor the topology</a></li>
 </ul>
 </li>
 </ul>
@@ -111,9 +120,9 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">2. Installation</a><ul>
-<li><a class="reference internal" href="#standalone-mode">2.1. Standalone Mode</a></li>
-<li><a class="reference internal" href="#distributed-mode">2.2. Distributed Mode</a></li>
+<li><a class="reference internal" href="#">3. Installation</a><ul>
+<li><a class="reference internal" href="#standalone-mode">3.1. Standalone Mode</a></li>
+<li><a class="reference internal" href="#distributed-mode">3.2. Distributed Mode</a></li>
 </ul>
 </li>
 </ul>
@@ -125,11 +134,11 @@
               
                 
   <li>
-    <a href="introduction.html" title="Previous Chapter: 1. Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 1. Introduction</span>
+    <a href="architecture.html" title="Previous Chapter: 2. Architecture"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 2. Architecture</span>
     </a>
   </li>
   <li>
-    <a href="drone.html" title="Next Chapter: 3. Drone"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">3. Drone &raquo;</span>
+    <a href="drone.html" title="Next Chapter: 4. Drone"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">4. Drone &raquo;</span>
     </a>
   </li>
               
@@ -165,8 +174,9 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">2. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="drone.html">3. Drone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">4. Drone</a></li>
 </ul>
 
 </ul>
@@ -183,7 +193,7 @@
     <div class="col-md-9">
       
   <div class="section" id="installation">
-<h1>2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>3. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>First we need to build the projects. Please refer the source page for more information.</p>
 <p>To deploy a sensor and process its data you need to run</p>
 <ol class="arabic simple">
@@ -196,14 +206,14 @@
 <p>We will focus on running IOTCloud here. First we need to build the IOTCloud project as described in the source section.</p>
 <p>The various configurations for the IOTCloud can be found in the conf/iot.yaml file.</p>
 <div class="section" id="standalone-mode">
-<h2>2.1. Standalone Mode<a class="headerlink" href="#standalone-mode" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. Standalone Mode<a class="headerlink" href="#standalone-mode" title="Permalink to this headline">¶</a></h2>
 <p>You need to Run Apache ZooKeeper first to run IOTCloud.</p>
 <p>Extract the IOTCloud and go to the iotcloud folder. The run</p>
 <p>./bin/iotcloud local</p>
 <p>This will start a master and site server on the same JVM.</p>
 </div>
 <div class="section" id="distributed-mode">
-<h2>2.2. Distributed Mode<a class="headerlink" href="#distributed-mode" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. Distributed Mode<a class="headerlink" href="#distributed-mode" title="Permalink to this headline">¶</a></h2>
 <p>To run in distributed mode, we need to first run a Master node.</p>
 <p>./bin/iotcloud master</p>
 <p>Then we need to run a site node by typing</p>
