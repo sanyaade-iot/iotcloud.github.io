@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Turtlebot &mdash; IOTCloud 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="IOTCloud 0.1 documentation" href="index.html" />
+    <link rel="prev" title="4. Drone" href="drone.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+   
+
+      
+   
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          IOTCloud</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway">2.1. Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#message-broker">2.2. Message Broker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#gateway-master">2.3. Gateway Master</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#distributed-stream-processing">2.4. Distributed Stream Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#cloud-storage">2.5. Cloud Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#batch-processing">2.6. Batch Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#standalone-mode">3.1. Standalone Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#distributed-mode">3.2. Distributed Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">4. Drone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#objective">4.1. Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#overall-architecture">4.2. Overall Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#building-the-source-code">4.3. BUILDING THE SOURCE CODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotcloud">4.4. iotcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#storm-broker-connectors">4.5. storm-broker-connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#iotrobots">4.6. iotrobots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deployment">4.7. Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#cloud-deployment">4.8. Cloud Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#build-the-changes">4.9. Build the changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#kill-the-existing-topology">4.10. Kill the existing topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#deploy-the-new-topology">4.11. Deploy the new topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drone.html#monitor-the-topology">4.12. Monitor the topology</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Turtlebot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#objective">5.1. Objective</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5. Turtlebot</a><ul>
+<li><a class="reference internal" href="#objective">5.1. Objective</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="drone.html" title="Previous Chapter: 4. Drone"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 4. Drone</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/turtlebot.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drone.html">4. Drone</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Turtlebot</a></li>
+</ul>
+
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="turtlebot">
+<h1>5. Turtlebot<a class="headerlink" href="#turtlebot" title="Permalink to this headline">¶</a></h1>
+<p>The turtlebot is a groud robots with a kinect cemera. The robot can move around and it can see both depth images and color images through the Kinect camera.</p>
+<div class="section" id="objective">
+<h2>5.1. Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>The objective of this project is to control the Turtlebot by processing the data coming from the Kinect camera.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, 2013, Indiana University.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
